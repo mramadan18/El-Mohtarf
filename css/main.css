@@ -1,0 +1,626 @@
+/****** Start Root *****/
+:root {
+  --main-color: #e60024;
+}
+/****** End Root *****/
+
+/***** Start Body ******/
+body {
+  padding-top: 74px;
+  font-family: "Nerko One", cursive;
+  overflow: hidden;
+}
+/***** End Body ******/
+
+/***** Start Framework ******/
+.main-color {
+  color: var(--main-color);
+}
+
+.overlay {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/***** End Framework ******/
+
+.nicescroll-cursors {
+  background-color: var(--main-color);
+}
+
+/* Start Tool Box */
+.option-box {
+  position: fixed;
+  border-radius: 5px;
+  top: 150px;
+  left: -200px;
+  width: 200px;
+  padding: 10px;
+  border: 2px solid var(--main-color);
+  z-index: 1000000;
+  transition: all 0.5s ease-in-out;
+}
+
+.option-box.open {
+  left: 0;
+}
+
+.option-box .list-unstyled {
+  margin: 0;
+}
+
+.option-box .color-option h4 {
+  font-weight: bold;
+}
+
+.option-box .color-option li {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin: 10px 2px;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.option-box .color-option li.active {
+  opacity: 1;
+  transform: scale(1.3);
+}
+
+.option-box .color-option li:first-child {
+  background-color: #e60024;
+}
+
+.option-box .color-option li:nth-child(2) {
+  background-color: #27ae60;
+}
+
+.option-box .color-option li:nth-child(3) {
+  background-color: #009aff;
+}
+
+.option-box .color-option li:last-child {
+  background-color: #d35400;
+}
+
+.option-box i {
+  position: absolute;
+  top: -2px;
+  right: -52px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  background-color: var(--main-color);
+  cursor: pointer;
+}
+/* End Tool Box */
+/****** Start Overriding Bootstrap *******/
+
+/******** Start Navbar *******/
+/* Background */
+.navbar {
+  padding: 0 1rem;
+  background-color: #222;
+}
+
+/* Nabar Logo */
+.navbar-dark .navbar-brand {
+  color: #bbb;
+  font-size: 30px;
+}
+
+/* Navbar Link */
+.navbar-dark .navbar-nav .nav-link {
+  color: #bbb;
+  padding: 25px 1rem;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  border-top: 3px solid var(--main-color);
+  background-color: #222;
+  top: 97%;
+}
+
+.navbar-dark .navbar-nav .show > .nav-link {
+  background-color: #000;
+}
+
+.dropdown-menu .dropdown-item {
+  transition: padding 0.5s ease;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  padding-left: 30px;
+}
+
+.dropdown-divider {
+  border-top: 1px solid var(--main-color);
+}
+
+/******* End Navbar *********/
+
+/******* Start Slider *******/
+.carousel-caption {
+  top: 50%;
+  bottom: auto;
+  right: -25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-right: 20px;
+  padding-left: 20px;
+  opacity: 0.7;
+  border-radius: 10px;
+}
+
+.carousel-indicators li {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid #eee;
+}
+/******* End Slider *******/
+
+/****** End Overriding Bootstrap *******/
+
+/***** Start About *****/
+.about .lead {
+  color: #888;
+  font-size: 25px;
+  margin-top: 15px;
+}
+/***** End About *****/
+
+/***** Start Our Features *****/
+.features .feat {
+  margin-bottom: 30px;
+}
+
+.features .feat .fa {
+  font-size: 34px;
+  margin-bottom: 20px;
+}
+
+.features .feat p {
+  line-height: 1.7;
+}
+/***** End Our Features *****/
+
+/* Start Testimonials */
+.testimonials h1 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.testimonials .lead {
+  line-height: 1.7;
+}
+
+.testimonials span {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.testimonials .carousel-indicators {
+  position: static;
+  margin-top: 30px;
+}
+
+.testimonials .carousel-indicators li {
+  width: 100px;
+  height: 100px;
+  text-indent: 0;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.testimonials .carousel-indicators li.active {
+  border: 3px solid var(--main-color);
+}
+
+.testimonials .carousel-indicators li img {
+  width: 100%;
+  height: 100%;
+}
+/* End Testimonials Section */
+
+/* Start Price Table */
+.price-table .price-box {
+  background-color: #fff;
+  padding: 0 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.price-table .price-box h2 {
+  margin: 20px 0 15px;
+}
+
+.price-table .price-box p {
+  font-size: 35px;
+  font-weight: bold;
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  line-height: 100px;
+  transition: all 1s;
+}
+
+.price-table .price-box:hover p {
+  transform: scale(1.1) rotate(360deg);
+  border: 1px solid #666;
+}
+
+.price-table .price-box ul {
+  line-height: 250%;
+  font-size: 18px;
+}
+
+.price-table .price-box a {
+  margin-bottom: 20px;
+}
+/* End Price Table */
+
+/* Start Our Team */
+.our-team {
+  position: relative;
+  background: url("../images/team.jpg") no-repeat center center fixed;
+  background-size: cover;
+  min-height: 600px;
+}
+
+.our-team h1 {
+  margin-bottom: 50px;
+}
+
+.our-team .person h3 {
+  margin-top: 20px;
+}
+
+.our-team .person p {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.our-team .person li {
+  display: inline-block;
+}
+
+/* End Our Team */
+
+/* Start Subscribe */
+
+.subscribe h1 {
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  color: #888;
+}
+
+.subscribe .form-inline {
+  justify-content: center;
+}
+
+.subscribe .form-control {
+  border-radius: 0;
+  width: 300px;
+  height: 38px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  margin-bottom: 10px;
+}
+
+.subscribe button {
+  border-radius: 0;
+  margin-bottom: 10px;
+}
+/* End Subscribe */
+
+/* Start Statistics */
+.statistics {
+  position: relative;
+  color: #b6b5b5;
+  background: url("../images/stats.jpg") no-repeat center center fixed;
+}
+
+.statistics .stats {
+  margin-bottom: 30px;
+  transition: all 0.5s ease-in-out;
+}
+
+.statistics p {
+  font-size: 60px;
+  font-weight: 800;
+  margin-bottom: 0;
+}
+
+.statistics span {
+  font-size: 18px;
+}
+/* End Statistics */
+
+/* Start Skills */
+.our-skills .progress {
+  height: 36px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.our-skills .progress .progress-bar {
+  text-align: left;
+  font-size: 18px;
+  text-indent: 10px;
+  font-weight: bold;
+}
+
+.our-skills .skills-info h3 {
+  margin-top: 0;
+  font-weight: bold;
+}
+/* End Skills */
+
+/* Start Contact Us */
+.contact-us {
+  position: relative;
+  padding: 50px 0;
+  background: url("../images/contact-us.jpg") no-repeat center center fixed;
+  color: #ddd;
+}
+
+.contact-us p {
+  margin-bottom: 40px;
+}
+
+.contact-us textarea {
+  height: 114px;
+  margin-bottom: 15px;
+}
+
+.contact-us input,
+textarea.form-control {
+  border: none;
+  opacity: 0.8;
+}
+
+/* End Contact Us */
+
+/* Start Our Clients */
+.our-clients img {
+  opacity: 0.5;
+  transition: all 0.5s ease-in-out;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.our-clients img:hover {
+  opacity: 1;
+}
+/* End Our Clients */
+
+/* Start Ultimate Footer */
+
+.footer {
+  background: #111;
+  color: #aaa;
+  padding-top: 10px;
+}
+
+.footer h3 {
+  letter-spacing: 1px;
+  margin: 30px 0 20px;
+}
+
+.footer a {
+  color: #aaa;
+  margin-top: 5px;
+  margin-right: 10px;
+}
+
+.footer .three-columns {
+  overflow: hidden;
+}
+
+.footer .three-columns li {
+  width: 33.3333%;
+  float: left;
+  padding: 5px 0;
+}
+
+.footer .social-list {
+  overflow: hidden;
+  margin: 20px 0 10px;
+}
+
+.footer .social-list li {
+  float: left;
+  margin-right: 3px;
+  opacity: 0.7;
+}
+
+.footer .social-list li:hover {
+  opacity: 1;
+}
+
+.footer .media-body h4 {
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.footer .img-thumbnail {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid #444;
+  margin-bottom: 5px;
+}
+
+.footer .copyright {
+  background: #333;
+  color: #aaa;
+  padding: 15px 0;
+  margin-top: 30px;
+  font-size: 18px;
+}
+
+.footer .copyright span {
+  font-weight: 400;
+}
+
+/* End Ultimate Footer */
+
+/* Start Media Query */
+@media (max-width: 992px) {
+  body {
+    padding-top: 55px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .dropdown-menu {
+    border: none;
+  }
+}
+
+@media (max-width: 992px) {
+}
+/* End Media Query */
+
+/* Start Loaging Pages */
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: var(--main-color);
+  z-index: 99999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading .loading-animate {
+  width: 80px;
+  height: 80px;
+  border: 5px double;
+  color: var(--main-color);
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: loading 1s linear infinite;
+}
+
+@keyframes loading {
+  25% {
+    color: #27ae60;
+  }
+  50% {
+    color: #009aff;
+  }
+  75% {
+    color: #d35400;
+  }
+  100% {
+    color: #e60024;
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* End Loaging Pages */
+
+/* Start Scroll Top */
+.scroll-top {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 50px;
+  height: 50px;
+  line-height: 55px;
+  background-color: var(--main-color);
+  color: #fff;
+  border-radius: 50%;
+  display: none;
+  z-index: 9999999999;
+}
+/* End Scroll Top */
+
+/* Start Our Grouping System */
+.features,
+.price-table,
+.subscribe,
+.our-clients {
+  background-color: #f7f7f7;
+  padding: 50px 0;
+}
+
+.about,
+.testimonials,
+.our-team,
+.statistics,
+.our-skills {
+  padding: 50px 0;
+}
+
+.features h1,
+.price-table h1,
+.our-team .person {
+  margin-bottom: 40px;
+}
+
+.statistics,
+.contact-us {
+  background-size: cover;
+}
+
+.statistics h1,
+.our-skills h1 {
+  margin-bottom: 60px;
+}
+
+.option-box,
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .active > .nav-link,
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link.show,
+.navbar-dark .navbar-nav .show > .nav-link,
+.navbar-dark .navbar-nav .show > .nav-link,
+.dropdown-menu .dropdown-item,
+.our-team,
+.statistics .stats:hover,
+.footer a:hover {
+  color: #fff;
+}
+
+.navbar-dark .navbar-nav .active > .nav-link,
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link.show,
+.navbar-dark .navbar-nav .show > .nav-link,
+.dropdown-menu .dropdown-item:hover,
+.carousel-caption,
+.carousel-indicators li.active {
+  background-color: var(--main-color);
+}
+
+.our-team,
+.statistics,
+.contact-us {
+  z-index: 0;
+}
+
+/* End Our Grouping System */
